@@ -1,3 +1,9 @@
+# Miwok
+Made using steps from Udacity's class in the Android Nanodegree called "Multiscreen apps"
+### Below is the description and details from the original author that created this project
+
+
+
 Miwok App
 ===================================
 
