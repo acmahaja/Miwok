@@ -30,8 +30,12 @@ public class MainActivity extends AppCompatActivity {
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
 
-
         TextView numbers = (TextView) findViewById(R.id.numbers);
+        TextView colors = (TextView) findViewById(R.id.numbers);
+        TextView family = (TextView) findViewById(R.id.numbers);
+        TextView phrases = (TextView) findViewById(R.id.numbers);
+
+
         numbers.setOnClickListener(new View.OnClickListener() {
             // The code in this method will be executed when the numbers category is clicked on.
             @Override
@@ -45,6 +49,50 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(numbersIntent);
             }
         });
-        }
+
+        colors.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the numbers category is clicked on.
+            @Override
+            public void onClick(View view) {
+                // Create a new intent to open the {@link NumbersActivity}
+                Toast.makeText(view.getContext(), "Open the list of colors", Toast.LENGTH_SHORT).show();
+
+                Intent colorsIntent = new Intent(MainActivity.this, ColorsActivity.class);
+
+                // Start the new activity
+                startActivity(colorsIntent);
+            }
+        });
+
+        family.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the numbers category is clicked on.
+            @Override
+            public void onClick(View view) {
+                // Create a new intent to open the {@link NumbersActivity}
+                Toast.makeText(view.getContext(), "Open the list of family members", Toast.LENGTH_SHORT).show();
+
+                Intent familyIntent = new Intent(MainActivity.this, FamilyActivity.class);
+
+                // Start the new activity
+                startActivity(familyIntent);
+            }
+        });
+
+        phrases.setOnClickListener(new View.OnClickListener() {
+            // The code in this method will be executed when the numbers category is clicked on.
+            @Override
+            public void onClick(View view) {
+                // Create a new intent to open the {@link NumbersActivity}
+                Toast.makeText(view.getContext(), "Open the list of phrases", Toast.LENGTH_SHORT).show();
+
+                Intent phrasesIntent = new Intent(MainActivity.this, NumbersActivity.class);
+
+                // Start the new activity
+                startActivity(phrasesIntent);
+            }
+        });
+
+
+    }
     }
 
